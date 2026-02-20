@@ -82,7 +82,9 @@ You may install Java from:
 
 `Open these pages (Ctrl/Cmd + Click to open in a new tab for your convenience):`
 
-- OpenJDK: <a href="https://adoptium.net/temurin/releases?version=25&mode=filter&os=any&arch=any" target="_blank" rel="noopener noreferrer">https://adoptium.net/</a>   
+`Open these pages (Ctrl/Cmd + Click to open in a new tab for your convenience):`
+
+- OpenJDK: <a href="https://adoptium.net/temurin/releases?version=25&mode=filter&os=any&arch=any" target="_blank">https://adoptium.net/</a>   
 - Oracle Java: <a href="https://www.oracle.com/java/technologies/downloads/" target="_blank" rel="noopener noreferrer">https://www.oracle.com/java/technologies/downloads/</a> 
 
 # Verify Java Installation
