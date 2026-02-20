@@ -1,61 +1,87 @@
 # omop-au-etl-tutorial
-Example tutorials and reference materials showing how APC-like and PBS-like datasets can be mapped to the OHDSI OMOP Common Data Model (CDM) using WhiteRabbit and Rabbit-In-A-Hat.
+
+Example tutorials and reference materials demonstrating how APC-like and PBS-like datasets can be mapped to the OHDSI OMOP Common Data Model (CDM) using WhiteRabbit, Rabbit-In-A-Hat, and associated OHDSI tools.
+
+---
 
 # Background
 
-This repository contains:
+This repository provides:
 
+- Example APC-like and PBS-like datasets
+- WhiteRabbit scan outputs
+- Mapping design artefacts
+- Supporting materials for demonstrating an OMOP ETL workflow in an Australian context
 
+---
 
-## Repository organisation
+# Repository Organisation
 
-The repository is generally organised as follows:
+The repository is organised as follows:
 
-* the top level contains the summary information, e.g., the summary presentation [PLACE PRESENTATION LINK HERE]
-    + [`fig/`](https://github.com/Australian-Health-Data-Evidence-Network/omop-au-etl-tutorial/tree/main/fig) contains the images used in these documents
-* [`data/`](https://github.com/Australian-Health-Data-Evidence-Network/omop-au-etl-tutorial/tree/main/data) contains the data files:
-    + the NMDS APC-like data [`apc_data.csv`](https://github.com/Australian-Health-Data-Evidence-Network/omop-au-etl-tutorial/blob/main/data/apc_data.csv)
-    + the PLIDA PBS-like data [`plida_pbs_data.csv`](https://github.com/Australian-Health-Data-Evidence-Network/omop-au-etl-tutorial/blob/main/data/plida_pbs_data.csv)
-* [`materials/`](https://github.com/Australian-Health-Data-Evidence-Network/omop-au-etl-tutorial/tree/main/materials/WhiteRabbit) contains the interim output from the ETL process files 
+- **Top level**
+  - Summary documentation and presentation materials  
+    *(Add presentation link here once available)*
 
-And the final directory:
+- [`fig/`](https://github.com/Australian-Health-Data-Evidence-Network/omop-au-etl-tutorial/tree/main/fig)  
+  Images used in documentation and presentations.
 
+- [`data/`](https://github.com/Australian-Health-Data-Evidence-Network/omop-au-etl-tutorial/tree/main/data)  
+  Example source datasets:
+  - NMDS APC-like data: [`apc_data.csv`](https://github.com/Australian-Health-Data-Evidence-Network/omop-au-etl-tutorial/blob/main/data/apc_data.csv)
+  - PLIDA PBS-like data: [`plida_pbs_data.csv`](https://github.com/Australian-Health-Data-Evidence-Network/omop-au-etl-tutorial/blob/main/data/plida_pbs_data.csv)
 
-# General process
+- [`materials/`](https://github.com/Australian-Health-Data-Evidence-Network/omop-au-etl-tutorial/tree/main/materials)  
+  Contains intermediate outputs from the ETL design process (e.g., WhiteRabbit scan reports, mapping files, documentation).
 
-1. Chuck the [`data/apc_data.csv`](https://github.com/Australian-Health-Data-Evidence-Network/omop-au-etl-tutorial/blob/main/data/apc_data.csv) and [`data/plida_pbs_data.csv`](https://github.com/Australian-Health-Data-Evidence-Network/omop-au-etl-tutorial/blob/main/data/plida_pbs_data.csv) csvs through [WhiteRabbit / Rabbit in a Hat ](https://github.com/OHDSI/WhiteRabbit)
-2. Use SQL/R code to match the concepts to the `OHDSI Standardized Vocabularies`
-3. Put the remaining concepts in the data not matched above through [Usagi](https://github.com/OHDSI/Usagi) to perform "manual matching" (although Usagi and new LLM based tools makes it much easier)
-4. Convert (ETL) your data to the OHDSI CDM.
-5. Examining Achilles and Data Quality Dashboard output on ARES or ATLAS-Dashboard
+---
 
+# General Process
 
-## WhiteRabbit & Rabbit-In-A-Hat Setup
+The tutorial follows a simplified OMOP ETL workflow:
+
+1. Profile the source data (`apc_data.csv`, `plida_pbs_data.csv`) using  
+   **WhiteRabbit** and design the ETL using **Rabbit-In-A-Hat**.
+
+2. Map source concepts to the **OHDSI Standardized Vocabularies** using SQL and/or R.
+
+3. Use **Usagi** for semi-automated vocabulary mapping of remaining unmatched source codes.
+
+4. Implement the ETL to transform the source data into the OMOP CDM structure.
+
+5. Evaluate the resulting OMOP database using:
+   - **Achilles**
+   - **Data Quality Dashboard**
+   - ARES / ATLAS dashboards
+
+---
+
+# WhiteRabbit & Rabbit-In-A-Hat Setup
 
 This tutorial uses official OHDSI tools for source data profiling and ETL design:
 
 - **WhiteRabbit** – scans source data and generates summary statistics  
-- **Rabbit-In-A-Hat** – designs the ETL mapping to the OMOP Common Data Model  
+- **Rabbit-In-A-Hat** – designs the ETL mapping to the OMOP CDM  
 
 These tools are **not distributed in this repository**.  
 Please download them directly from the official OHDSI source.
 
 ---
 
-### 1️⃣ Prerequisites
+## 1. Prerequisites
 
 WhiteRabbit and Rabbit-In-A-Hat require:
 
 - **Java 8 (1.8) or higher**
 
-#### Install Java
+### Install Java
 
 You may install Java from:
 
-- Recommended (OpenJDK): https://adoptium.net/  
+- OpenJDK (recommended): https://adoptium.net/  
 - Oracle Java: https://www.oracle.com/java/technologies/downloads/
 
-After installation, verify Java is available:
+After installation, verify:
 
 ```bash
 java -version
@@ -65,9 +91,9 @@ You should see a version number ≥ 1.8.
 
 ---
 
-### 2️⃣ Download WhiteRabbit
+## 2. Download WhiteRabbit
 
-Download the latest release from the official OHDSI GitHub repository:
+Download the latest release from the official OHDSI repository:
 
 https://github.com/OHDSI/WhiteRabbit
 
@@ -75,15 +101,15 @@ Steps:
 
 1. Click **Releases**
 2. Download the latest `.zip` file
-3. Extract the contents to a local directory
+3. Extract to a local directory
 
 ---
 
-### 3️⃣ Run the Tools
+## 3. Run the Tools
 
-After extracting the ZIP:
+After extracting:
 
-#### ▶ WhiteRabbit
+### WhiteRabbit
 
 - **Windows**
   ```
@@ -97,7 +123,7 @@ After extracting the ZIP:
 
 ---
 
-#### ▶ Rabbit-In-A-Hat
+### Rabbit-In-A-Hat
 
 - **Windows**
   ```
@@ -111,7 +137,7 @@ After extracting the ZIP:
 
 ---
 
-### Notes
+# Notes
 
 - These tools are developed and maintained by OHDSI.
 - This repository does not redistribute binaries.
