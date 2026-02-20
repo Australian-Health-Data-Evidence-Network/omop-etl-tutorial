@@ -82,9 +82,8 @@ You may install Java from:
 
 `Open these pages (Ctrl/Cmd + Click to open in a new tab for your convenience):`
 
-- OpenJDK: <a href="https://adoptium.net/temurin/releases?version=25&mode=filter&os=any&arch=any" target="_blank">https://adoptium.net/</a>   
-- Oracle Java: <a href="https://www.oracle.com/java/technologies/downloads/" target="_blank" rel="noopener noreferrer">https://www.oracle.com/java/technologies/downloads/</a> 
-
+- OpenJDK: [`https://adoptium.net/`](https://adoptium.net/temurin/releases?version=25&mode=filter&os=any&arch=any)   
+- Oracle Java: [`https://www.oracle.com/java`](https://www.oracle.com/java/technologies/downloads/)
 # Verify Java Installation
 
 After installing Java, verify the installation by running:
@@ -113,8 +112,8 @@ Choose one of the following:
 - Search for **Command Prompt**
 - Open it
 
-**Option C (PowerShell also works)**  
-- Search for **PowerShell**
+**Option C (Terminal or PowerShell also works)**  
+- Search for **PowerShell** or **Terminal**
 - Open it
 
 ---
@@ -135,7 +134,9 @@ Java(TM) SE Runtime Environment
 or
 
 ```bash
-openjdk version "17.0.9"
+openjdk version "25.0.2" 2026-01-20 LTS
+OpenJDK Runtime Environment Temurin-25.0.2+10 (build 25.0.2+10-LTS)
+OpenJDK 64-Bit Server VM Temurin-25.0.2+10 (build 25.0.2+10-LTS, mixed mode, sharing)
 ```
 
 If the version is **1.8 or higher**, you're good to go.
@@ -233,10 +234,7 @@ Any of the following are valid:
 `Open these pages (Ctrl/Cmd + Click to open in a new tab for your convenience):`
 
 Download the latest release from the official OHDSI repository:
-
-<a href="https://github.com/OHDSI/WhiteRabbit" target="_blank" rel="noopener noreferrer">
-https://github.com/OHDSI/WhiteRabbit
-</a>
+[`https://github.com/OHDSI/WhiteRabbit`](https://github.com/OHDSI/WhiteRabbit)
 
 ### How to Find the Release File
 
@@ -245,10 +243,7 @@ https://github.com/OHDSI/WhiteRabbit
    - It is usually located in the right sidebar.
 3. Click on **Releases**.
    - Alternatively, you can go directly to:
-   
-   <a href="https://github.com/OHDSI/WhiteRabbit/releases" target="_blank" rel="noopener noreferrer">
-   https://github.com/OHDSI/WhiteRabbit/releases
-   </a>
+    [`https://github.com/OHDSI/WhiteRabbit/releases`](https://github.com/OHDSI/WhiteRabbit/releases)
 
 4. Click the latest release (top-most version).
 5. Under **Assets**, download the `.zip` file.
