@@ -78,7 +78,7 @@ WhiteRabbit and Rabbit-In-A-Hat require:
 
 You may install Java from:
 
-- OpenJDK: <a href="https://adoptium.net/temurin/releases?version=25&mode=filter&os=any&arch=any" target="_blank" rel="noopener noreferrer">https://adoptium.net/</a>   
+- OpenJDK: <a href="https://adoptium.net/temurin/releases?version=25&mode=filter&os=any&arch=any" target="_blank">https://adoptium.net/</a>   
 - Oracle Java: <a href="https://www.oracle.com/java/technologies/downloads/" target="_blank" rel="noopener noreferrer">https://www.oracle.com/java/technologies/downloads/</a> 
 
 # Verify Java Installation
