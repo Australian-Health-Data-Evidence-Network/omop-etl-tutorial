@@ -1,4 +1,4 @@
-# omop-au-etl-tutorial
+# OMOP AU ETL Tutorial
 
 Example tutorials and reference materials demonstrating how APC-like and PBS-like datasets can be mapped to the OHDSI OMOP Common Data Model (CDM) using WhiteRabbit, Rabbit-In-A-Hat, and associated OHDSI tools.
 
