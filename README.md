@@ -23,15 +23,15 @@ The repository is organised as follows:
   - Summary documentation and presentation materials  
     *(Add presentation link here once available)*
 
-- [`data/`](https://github.com/Australian-Health-Data-Evidence-Network/omop-au-etl-tutorial/tree/main/data)  
+- [`data/`](https://github.com/Australian-Health-Data-Evidence-Network/omop-etl-tutorial/tree/main/data)  
   Example source datasets:
-  - NMDS APC-like data: [`apc_data.csv`](https://github.com/Australian-Health-Data-Evidence-Network/omop-au-etl-tutorial/blob/main/data/apc_data.csv)
-  - PLIDA PBS-like data: [`plida_pbs_data.csv`](https://github.com/Australian-Health-Data-Evidence-Network/omop-au-etl-tutorial/blob/main/data/plida_pbs_data.csv)
+  - NMDS APC-like data: [`apc_data.csv`](https://github.com/Australian-Health-Data-Evidence-Network/omop-etl-tutorial/blob/main/data/apc_data.csv)
+  - PLIDA PBS-like data: [`plida_pbs_data.csv`](https://github.com/Australian-Health-Data-Evidence-Network/omop-etl-tutorial/blob/main/data/plida_pbs_data.csv)
 
 - [`fig/`](https://github.com/Australian-Health-Data-Evidence-Network/omop-au-etl-tutorial/tree/main/fig)  
   Images used in documentation and presentations.
 
-- [`materials/`](https://github.com/Australian-Health-Data-Evidence-Network/omop-au-etl-tutorial/tree/main/materials)  
+- [`materials/`](https://github.com/Australian-Health-Data-Evidence-Network/omop-etl-tutorial/tree/main/materials)  
   Contains intermediate outputs from the ETL design process (e.g., WhiteRabbit scan reports, mapping files, documentation).
 
 
