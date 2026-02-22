@@ -283,12 +283,6 @@ Double-click:
 whiteRabbit.bat
 ```
 
-3. Run:
-
-```
-whiteRabbit.bat
-```
-
 WhiteRabbit should now launch.
 
 ---
