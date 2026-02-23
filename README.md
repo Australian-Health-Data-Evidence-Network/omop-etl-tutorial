@@ -86,7 +86,7 @@ You may install Java from:
 - Oracle Java: [`https://www.oracle.com/java`](https://www.oracle.com/java/technologies/downloads/)
 # Verify Java Installation
 
-After installing Java, verify the installation by running:
+After installing Java, verify the installation by running command:
 
 ```bash
 java -version
