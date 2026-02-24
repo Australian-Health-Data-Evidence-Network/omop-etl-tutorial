@@ -35,7 +35,7 @@ The repository is organised as follows:
   Contains intermediate outputs from the ETL design process (e.g., WhiteRabbit scan reports, mapping files, documentation).
 
 - [`docs/Security`](https://github.com/Australian-Health-Data-Evidence-Network/omop-etl-tutorial/tree/main/docs/Security/)  
-  Contains an example template for a **Third-Party Application Security Assessment (TPASA)** covering tools required during the Pre-ETL stage (e.g., WhiteRabbit and Rabbit-In-a-Hat).The template is provided as a reference and should be adapted to align with your organisation’s cybersecurity policies, risk management framework, and application whitelisting procedures before requesting approval to use OHDSI tools.
+  Contains an example template for a **Third-Party Application Security Assessment (TPASA)** covering tools required during the Pre-ETL stage (e.g., WhiteRabbit and Rabbit-In-a-Hat). The template is provided as a reference and should be adapted to align with your organisation’s cybersecurity policies, risk management framework, and application whitelisting procedures before requesting approval to use OHDSI tools.
 
 
 
